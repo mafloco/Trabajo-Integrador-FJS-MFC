@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>La vida es Bella</title>
+</head>
+<body>
+    <header>
+        "La Casa de la Poesía"
+    </header>
+
+    <nav></nav>
+
+<main>
+    <h1>Poema de la vida</h1>
+    <h2>Las 10 mejores poemas de Mario Benedetti</h2>
+
+        <section class="poesias"></section>
+            <div class="caja" onclick="mostrarPoesia('poesia1')">No te salves</div>
+            <div class="caja" onclick="mostrarPoesia('poesia2')">Por siempre</div>
+            <div class="caja" onclick="mostrarPoesia('poesia3')">Esta es mi casa</div>
+            <div class="caja" onclick="mostrarPoesia('poesia4')">Hagamos un trato</div>
+            <div class="caja" onclick="mostrarPoesia('poesia5')">Corazón Coraza</div>
+            <div class="caja" onclick="mostrarPoesia('poesia6')">Táctica y estrategia</div>
+            <div class="caja" onclick="mostrarPoesia('poesia7')">Te quiero</div>
+            <div class="caja" onclick="mostrarPoesia('poesia8')">Defender la alegría</div>
+            <div class="caja" onclick="mostrarPoesia('poesia9')">Todavía</div>
+            <div class="caja" onclick="mostrarPoesia('poesia10')">Amor de tarde</div>     
+        </section>
+
+        <section id="formulario" class="formulario oculto">
+            <h2 id="titulo-poesia"></h2>
+            <textarea id="texto-poesia" oninput="ajustarAltura(this)" readonly></textarea>
+            <button onclick="leerTexto('texto-poesia')">Leer Poesía</button>
+            <button onclick="cerrarFormulario()">Cerrar</button>
+        </section>
+        <script src="script.js"></script>
+    </main>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Fondo del sitio */
+html {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    background-image: url(fondo.png);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #ccc;
+}
+
+/* Estilos del título principal */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    border-bottom: 2px solid #333;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+/* Estilos del subtítulo */
+h2 {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Contenedor de la cuadrícula de poesías */
+.poesias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Estilos de cada caja de poesía */
+.caja {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.caja::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 2px solid #333;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.caja:hover::before {
+    transform: scale(1.1); /* Efecto de agrandamiento en hover */
+    border-color: #007bff;
+}
+
+.caja:hover {
+    background-color: #d9e2ec;
+    transform: translateY(-5px); /* Eleva la caja en hover */
+}
+
+/* Formulario emergente para ver la poesía seleccionada */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin-top: 20px;
+    opacity: 0.95;
+}
+
+/* Ocultar el formulario cuando no se necesita */
+.oculto {
+    display: none;
+}
+
+/* Botones dentro del formulario */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Área de texto (textarea) */
+textarea {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    max-width: 500px; /* Limita el ancho máximo */
+    height: 200px; /* Altura fija más corta */
+    padding: 10px;
+    border: 2px solid #007BFF;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('cielo.png'); /* Superposición blanca semitransparente */
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    resize: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+textarea:focus {
+    
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.3);
+}
+
+/* Cursor personalizado */
+body, .caja, button {
+    cursor: url(flor.png), pointer;
+}
